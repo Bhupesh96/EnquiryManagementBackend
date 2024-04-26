@@ -4,11 +4,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const DB = process.env.DATABASE;
+const DB = process.env.REACT_APP_DATABASE;
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
+console.log('DB', DB)
 // Connect to MongoDB
 mongoose.connect(DB, {
   useNewUrlParser: true,
