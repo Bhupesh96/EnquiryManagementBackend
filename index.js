@@ -4,12 +4,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const DB = process.env.DATABASE;
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://bswork9617:E1IU9lvuOQK6zw5B@cluster0.dvmgrph.mongodb.net/enquiry-management', {
+mongoose.connect(DB, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
