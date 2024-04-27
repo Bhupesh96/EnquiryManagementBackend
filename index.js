@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 console.log('DB', DB)
 // Connect to MongoDB
-mongoose.connect(DB, {
+mongoose.connect("mongodb+srv://bswork9617:E1IU9lvuOQK6zw5B@cluster0.dvmgrph.mongodb.net/enquiry-management", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
